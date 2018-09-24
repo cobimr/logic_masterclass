@@ -1,6 +1,10 @@
 const { log } = console;
 
-// O(n) Version
+// Given 2 strings, write a function to determine if:
+// ( the second string is an 'anagram' of the first)
+
+// An anagram is a word, phrase, or name formed by rearranging the letters of another, such as cinema, formed from iceman.
+
 
 log(validAnagram("", "")); // true
 log(validAnagram("aaz", "zza")); //false
@@ -11,6 +15,7 @@ log(validAnagram("qwerty", "qeywrt")); //true
 log(validAnagram("texttwisttime", "timetwisttext")); //true
 log(validAnagram("ArEr", "RwasD")); //true
 
+// O(n) Version
 
 function validAnagram(str1, str2) {
   if (str1.length !== str2.length) {
