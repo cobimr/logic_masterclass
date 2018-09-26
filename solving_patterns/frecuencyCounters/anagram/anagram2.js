@@ -13,7 +13,7 @@ log(validAnagram("rat", "car")); //false
 log(validAnagram("awesome", "awesom")); //false
 log(validAnagram("qwerty", "qeywrt")); //true
 log(validAnagram("texttwisttime", "timetwisttext")); //true
-log(validAnagram("ArEr", "RwasD")); //true
+log(validAnagram("ArEr", "RwasD")); //false
 
 // O(n) Version
 
@@ -31,8 +31,8 @@ function validAnagram(str1, str2) {
     lookup[letter] ? (lookup[letter] += 1) : (lookup[letter] = 1);
   }
 
-  for (let i = 0; i < str1.length; i++) {
-    let letter = str1[i];
+  for (let i = 0; i < str2.length; i++) {
+    let letter = str2[i];
     // can't find letter or letter is zero then it's not an anagram
     if (!lookup[letter]) {
       return false;
